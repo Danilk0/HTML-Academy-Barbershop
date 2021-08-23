@@ -1,0 +1,386 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("PT Sans"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/PTSans.woff2") format("woff2"),
+         
+  }
+body{
+    margin: auto;
+    padding: auto;
+    font-size: 14px;
+    font-family: 'PT Sans','Arial', sans-serif;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+
+    background-color: #F2F2F2;
+    background-image: url("img/bgPrice.jpg");
+    background-position: top center;
+    background-repeat: repeat;
+}
+a{
+    text-decoration: none;
+}
+b{
+    
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+input [type="checkbox"] .visually-hidden,
+input [type="radio"] .visually-hidden,
+.visually-hidden{
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+   
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.button{
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 30px;
+    font: inherit;
+
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: #000000;
+    border: none ;
+   
+}
+.button:focus,
+.button:hover,
+.button:active{
+    background-color: #663d15;
+}
+.main-navigation{
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
+.site-navigation, .user-navigation, .header-navigation{
+    list-style: none;
+    padding: 0;
+}
+.color-gray{
+    color:#ABA9A7;
+}
+.site-navigation a, .user-navigation a{
+    color: #fff;
+}
+.header-navigation a{
+    color: #000;
+}
+html,body{
+    min-width: 946px;
+    min-height: 1059px;
+}
+.main-navigation{
+    width: 100%;
+    background-color: #000000;
+    margin-bottom: 60px;
+}
+.conteiner-header-footer{
+    width: 942px;
+    margin: 0 auto;
+    padding: 0 10px;
+   
+    display: flex;
+    justify-content: space-between;
+}
+.site-navigation{
+    width: 720px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.user-navigation{
+    width: 125px;
+    display: flex;
+    justify-content: right;
+  
+}
+.site-navigation, .user-navigation{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.site-navigation a, .user-navigation a{
+    display: block;
+    padding: 20px 15px; 
+    height:24px;
+    color: #fff;
+}
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus{
+    background-color: #2424;
+}
+.user-navigation a, .login-link{
+    position: relative;
+    padding-left: 25px;
+    
+   
+}
+
+.login-link::before{
+    content: "";
+
+    position: absolute;
+    top: 23px;
+    left: 0px;
+    
+    width: 16px;
+    height: 18px;
+
+   
+    background-image: url(img/login.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before{
+    opacity: 1;
+}
+.header-navigation{
+    display: flex;
+    margin-bottom: 55px;
+}
+.header-navigation a{
+    display: block;
+    position: relative;
+    width: 77px;
+    margin-right: 10px;
+}
+.header-navigation a::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 0px;
+    bottom: 7px;
+    transform: rotate(45deg);
+    background-color: #000000;
+}
+.conteiner{
+    width: 942px;
+    margin: 0 auto;
+    padding: 0 10px;
+   
+}
+.filther{
+    width: 240px;
+}
+
+.catalog-list{
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    list-style: none;
+    padding-left: 0px;
+}
+.producer ul{
+    list-style: none;
+
+    padding: 0px;
+}
+.producer h1, .products-groop h1{
+    margin-bottom: 40px;
+}
+.producer-list li,.products-groop-list li{
+   
+    margin-bottom: 15px;
+}
+.login-checkbox{
+    position: relative;
+    padding-left: 40px;
+    padding-left: 30px;
+
+    cursor: pointer;
+}
+
+.login-checkbox:focus,
+.login-checkbox:hover{
+    color: #663d15;
+}
+.login-checkbox input[type="checkbox"] + .checkbox-indicator{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+}
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator{
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before{
+    transform: rotate(45deg);
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after{
+    transform: rotate(-45deg);
+}
+
+
+.login-checkbox input[type="radio"] + .checkbox-indicator-around{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+    border-radius: 100%;
+}
+.login-checkbox input[type="radio"]:focus + .checkbox-indicator-around{
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+.login-checkbox input[type="radio"]:checked+.checkbox-indicator-around::after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+}
+
+.products-groop ul{
+    list-style: none;
+    padding: 0px;
+}
+.main-wrapper{
+    display: flex;
+}
+/*футер*/
+.main-footer{
+    color: #ffffff;
+    background-color: #212121;
+    background-image: url("img/patern-footer.png");
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+.footer-contacts a{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.footer-contacts a:hover,
+.footer-contacts a:focus{
+    text-decoration: none;
+}
+.footer-social{
+    text-align: center;
+   
+}
+.footer-social ul{
+    list-style: none;
+}
+.social-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    width: 43px;
+    height: 43px;
+    background-color:#000000;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.social-button:hover,
+.social-button:focus{
+    background-color: #ffffff;
+}
+.social-button:focus path,
+.social-button:hover path{
+    fill: #000000;
+}
+.footer-social b{
+    display: block;
+    margin-bottom: 15px;
+}
+.footer-developer{
+    text-align: center;
+}
+.footer-developer b{
+    display: block;
+    margin-bottom: 15px;
+}
+.footer-developer .button{
+    display: block;
+    margin-right: 0;
+}
+.footer-developer .button:focus,
+.footer-developer .button:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+.main-footer{
+    margin-top: 65px;
+    padding: 60px 0;
+}
+.footer-contacts{
+    width: 320px;
+    margin: 0px;
+    margin-right: 80px;
+}
+.footer-social{
+    
+    width: 145px;
+    margin: 0;
+    padding-top: 0;
+    margin-right: auto;
+}
+.footer-social ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 141px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+}
+.footer-developer{
+    width: 150px;
+    margin: 0px;
+}
+.main-footer{
+    display: flex;
+   
+}

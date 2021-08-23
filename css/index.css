@@ -1,0 +1,648 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("PT Sans"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/PTSans.woff2") format("woff2"),
+         
+  }
+body{
+    margin: auto;
+    padding: auto;
+    font-size: 14px;
+    font-family:  'PT Sans','Arial', sans-serif;
+    line-height: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+
+    background-color: #000;
+    background-image: url("img/bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+b{
+    
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+}
+input [type="checkbox"] .visually-hidden,
+input [type="radio"] .visually-hidden,
+.visually-hidden{
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+   
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.button{
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 30px;
+    font: inherit;
+
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background-color: #000000;
+    border: none ;
+   
+}
+.button:focus,
+.button:hover,
+.button:active{
+    background-color: #663d15;
+}
+.main-navigation{
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+
+}
+.site-navigation, .user-navigation{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.site-navigation a, .user-navigation a{
+    display: block;
+    padding: 25px 20px;
+
+    color: #fff;
+}
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus{
+    background-color: #2424;
+}
+.user-navigation, .login-link{
+    position: relative;
+    padding-left: 50px;
+    
+   
+}
+
+.login-link::before{
+    content: "";
+
+    position: absolute;
+    top: 27px;
+    left: 0px;
+    
+    width: 16px;
+    height: 18px;
+
+   
+    background-image: url(img/login.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before{
+    opacity: 1;
+}
+.features-list{
+    list-style: none;
+    text-align: center;
+ 
+}
+.feature-item h3{
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 60px;
+    font-size: 30px;
+    line-height: 42px;
+}
+.feature-item h3::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    
+    transform: rotate(45deg);
+    background-color: #ffffff;
+}
+.fеature-item{
+    width: 300px;
+    text-align: center;
+
+    font-size: 14px;
+    list-style: 24px;
+}
+.feature-item p{
+    margin: 0 10px;
+}
+.index-column{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
+    color: #000;
+
+    background-color: #f8f5f2;
+    background-image:
+        url(img/linebg.png),
+        url("img/column-index.jpg");
+    background-position:center, 0 0;
+    background-repeat:no-repeat, repeat;
+}
+.index-column h2{
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 42px;
+
+}
+.index-column time{
+    text-transform: none;
+}
+.gallery-content{
+    height: 164px;
+    margin: 0;
+    background-color: #cccccc;
+    border: 7px solid #ffffff;
+}
+.gallery-content img{
+    width: 286px;
+    height: 164px;
+}
+.gallery-conteiner{
+    position: relative;
+    height: 260px;
+    
+}
+.gallery-button-back,
+.gallery-button-next{
+    box-sizing: border-box;
+    position: absolute;
+    width: 140px;
+    margin: 0;
+    bottom: 0;
+}
+.gallery-button-back{
+    left: 0;
+}
+.gallery-button-next{
+    right: 0;
+}
+.news-list{
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    list-style: none;
+}
+.news-item{
+    margin-bottom: 25px;
+
+}
+.news-item p{
+    margin: 0;
+}
+.contacts p{
+    margin: 0;
+    margin-bottom: 25px;
+}
+.appointment-info{
+    margin: 0;
+    margin-bottom: 15px;
+}
+.appointment-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.appointment-item{
+    width: 140px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.appointment-item label{
+    display: block;
+    margin-bottom: 9px;
+    margin-left: 15px;
+}
+.appointment-item input{
+    width: 140px;
+    font: inherit;
+    background-color: transparent;
+    border: 2px solid #000000;
+
+    box-sizing: border-box;
+    width: 140px;
+    padding:8 15 15 7;
+}
+.appointment .button{
+    display: block;
+    width: 100%;
+    margin-right: 0;
+}
+.appointment-item input:focus{
+    border-color: #663d15;
+}
+.main-footer{
+    color: #ffffff;
+    background-color: #212121;
+    background-image: url("img/patern-footer.png");
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+.footer-contacts a{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.footer-contacts a:hover,
+.footer-contacts a:focus{
+    text-decoration: none;
+}
+.footer-social{
+    text-align: center;
+   
+}
+.footer-social ul{
+    list-style: none;
+}
+.social-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    width: 43px;
+    height: 43px;
+    background-color:#000000;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.social-button:hover,
+.social-button:focus{
+    background-color: #ffffff;
+}
+.social-button:focus path,
+.social-button:hover path{
+    fill: #000000;
+}
+.footer-social b{
+    display: block;
+    margin-bottom: 15px;
+}
+.footer-developer{
+    text-align: center;
+}
+.footer-developer b{
+    display: block;
+    margin-bottom: 15px;
+}
+.footer-developer .button{
+    display: block;
+    margin-right: 0;
+}
+.footer-developer .button:focus,
+.footer-developer .button:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+.modal{
+    color: #00000000;
+
+    background-color: #f8f3f0;
+    background-image: url(img/pater-modal.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+.modal h2{
+    font-size: 30px;
+    line-height: 42px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"]{
+    font: inherit;
+    color: #000000;
+    text-transform: uppercase;
+
+    background-color: #f9f6f3;
+    border: 2px solid #000000;
+}
+.login-form input :focus{
+    border-color: #663d15;
+}
+.login-checkbox:focus
+.login-checkbox:hover{
+    color: #663d15;
+}
+.restore{
+    color: #000000;
+    text-decoration: underline;
+}
+.restore:hover,
+.restore:focus{
+    text-decoration: none;
+}
+html,body{
+    min-width: 1122px;
+    min-height: 1750px;
+}
+.main-header{
+    margin-bottom: 75px;
+}
+.main-header-logo{
+    width: 368px;
+    height: 153px;
+    order: 2;
+}
+.main-navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.site-navigation{
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 720px;
+}
+.user-navigation{
+    display: flex;
+    justify-content: right;
+    width: 120px;
+} 
+.main-navigation-wrapper{
+    background-color: #000;
+    width: 100%;
+    margin-bottom: 60px;
+}
+.conteiner,.conteiner-header-footer{
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+ 
+}
+.conteiner-header-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.main-navigation-wrapper{
+    display: flex;
+
+    justify-content: space-between;
+}
+.features-list{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+}
+.fеature-item{
+    width: 300px;
+}
+.features{
+    margin-bottom: 80px;
+}
+.index-column{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
+}
+.news{
+    width: 380px;
+}
+.gallery{
+    width: 300px;
+}
+.contacts{
+    width: 380px;
+}
+.appointment{
+    width: 300px;
+}
+.main-footer{
+    margin-top: 65px;
+    padding: 60px 0;
+}
+.footer-contacts{
+    width: 320px;
+    margin: 0px;
+    margin-right: 80px;
+}
+.footer-social{
+    
+    width: 145px;
+    margin: 0;
+    padding-top: 0;
+    margin-right: auto;
+}
+.footer-social ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 141px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+}
+.footer-developer{
+    width: 150px;
+    margin: 0px;
+}
+.main-footer{
+    display: flex;
+   
+}
+.modal{
+    position:fixed;
+    color: #000000;
+
+    background-color: #f8f3f0;
+    background-image: url(img/pater-modal.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0. 7);
+}
+.modal-login{
+    top: 120px;
+    left: 50%;
+
+    display: none;
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;
+}
+.modal-close{
+    position: absolute;
+    top: 0px;
+    right: -34px;
+    width: 22px;
+    height: 22px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.modal-close::after,
+.modal-close::before{
+    content: "";
+    top: 10px;
+    left: 2px;
+    position: absolute;
+    width: 19px;
+    height: 3px;
+    background-color: #d0d0d0;
+}
+.modal-close::after{
+    transform: rotate(45deg);
+}
+.modal-close::before{
+    transform: rotate(-45deg);
+}
+.modal-login h2{
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 42px;
+}
+.modal-discription{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.modal-label input[type="text"],
+.modal-label input[type="password"]{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px;
+
+    font: inherit;
+    color: #000000;
+    text-transform: inherit;
+    
+    background-color: #f9f6f3;
+    border:2px solid #000000 ;
+}
+.login-form .login-help{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 15px 0;
+
+}
+.modal-label input:focus{
+    background-color: #663d15;
+}
+.login-icon-user{
+    background-image: url(img/user.svg);
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+.login-icon-password{
+    background-image: url(img/lock.svg);
+    background-position: 270px center;
+    background-repeat: no-repeat;
+}
+.login-checkbox{
+    position: relative;
+    
+    padding-left: 30px;
+
+    cursor: pointer;
+}
+
+.login-checkbox:focus,
+.login-checkbox:hover{
+    color: #663d15;
+}
+.login-checkbox input[type="checkbox"] + .checkbox-indicator{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 17px;
+    height: 17px;
+    border: 2px solid #000000;
+}
+.login-checkbox input[type="checkbox"]:focus + .checkbox-indicator{
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 1px;
+    width: 15px;
+    height: 2px;
+    background-color: #000000;
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before{
+    transform: rotate(45deg);
+}
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after{
+    transform: rotate(-45deg);
+}
+.login-form .button{
+    width: 100%;
+    margin-right: 0px;
+}
+.modal-map{
+    top: 50%;
+    left: 50%;
+    display: none;
+
+    width: 766px;
+    height: 561px;
+    margin-top: -280px;
+    margin-left: -390px;
+
+    border: 7px solid white;
+}
+.modal-map p{
+    margin: 0;
+    
+}
+@keyframes bounce {
+    0%      {transform: translateY(-2000px);}
+    70%     {transform: translateY(30px);}
+    90%     {transform: translateY(-10px);}
+    100%    {transform: translateY(0);}
+}
+.modal-show{
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+@keyframes shake {
+    0%,100%             {transform: translate(0);}
+    10%,30%,50%,70%,90% {transform: translate(-10px);}
+    20%,40%,60%,80%     {transform: translate(10px);}
+}
+.modal-error{
+    animation-name: shake;
+    animation-duration: 0.6s;
+}
